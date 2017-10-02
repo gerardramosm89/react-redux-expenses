@@ -1,16 +1,24 @@
 import * as firebase from 'firebase';
 
 const config = {
-  apiKey: "AIzaSyAapA5P8gWC83aHK26xgDDMzIBC4dw914w",
-  authDomain: "expensify-a13e6.firebaseapp.com",
-  databaseURL: "https://expensify-a13e6.firebaseio.com",
-  projectId: "expensify-a13e6",
-  storageBucket: "expensify-a13e6.appspot.com",
-  messagingSenderId: "124728096317"
+  apiKey: "AIzaSyCvXg0ZqRl6RXH0HZRMtdYl8u0ysmgiPw4",
+  authDomain: "rr-expensify.firebaseapp.com",
+  databaseURL: "https://rr-expensify.firebaseio.com",
+  projectId: "rr-expensify",
+  storageBucket: "rr-expensify.appspot.com",
+  messagingSenderId: "302329296818"
 };
 
 firebase.initializeApp(config);
 
-firebase.database().ref().set({
-  name: 'Andrew Mead'
+const db = firebase.database();
+
+db.ref().set({
+  name: 'Gerard Zarian',
+  age: 15,
+  isSingle: true,
+  location: {
+    city: 'San Jose',
+    state: 'California'
+  }
 });
