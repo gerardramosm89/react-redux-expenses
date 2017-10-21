@@ -13,12 +13,4 @@ firebase.initializeApp(config);
 
 const db = firebase.database();
 
-db.ref().set({
-  name: 'Gerard Zarian',
-  age: 15,
-  isSingle: true,
-  location: {
-    city: 'San Jose',
-    state: 'California'
-  }
-});
+export { firebase, database as default };
